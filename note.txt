@@ -1,6 +1,0 @@
-1. Discritize eGFR itu saya kecilkan lagi kategorinya dikarenakan ada indikasi class imbalance. “Meskipun distribusi kelas masih menunjukkan ketidakseimbangan dengan rasio sekitar 20:1, kondisi ini mencerminkan distribusi populasi nyata. Oleh karena itu, penelitian ini menggunakan pendekatan stratified cross validation dan evaluasi berbasis recall serta F1-score untuk memastikan performa model pada kelas minoritas.”
-
-2. Discritize Age saya persempit lagi kategorinya dikarenakan ketidakseimbangan data (balita hanya ada 20 data). jadi saya hapus kategori balita dan Kanak kanak menjadi Anak, remaja awal dan remaja akhir menjadi remaja, dewasa awal dan dewasa akhir menjadi dewasa, lansia awal dan lansia akhir menjadi lansia.
-
-3. di select attribute, saya tidak mengambil data sistolik, diastolik, dan kreatinin untuk train data dikarenakan bp_category sudah menghitung dan mendiskritisasi sistolik dan diastolik. dan kreatinin pun sudah di representasikan oleh data eGFR yg menggunakan data kreatinin sebagai bahan utama. “Untuk menghindari redundansi informasi, penelitian ini tidak menggunakan atribut mentah dan atribut turunan secara bersamaan. Oleh karena itu, kategori tekanan darah digunakan sebagai representasi klinis, sementara nilai sistolik dan diastolik tidak disertakan secara simultan dalam proses pelatihan model.”
-
