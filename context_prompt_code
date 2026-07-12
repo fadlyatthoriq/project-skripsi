@@ -1,0 +1,572 @@
+# CONTEXT PROMPT — CDSS Fadly Atthoriq (UPDATED)
+
+## Overview Project
+Prototipe Clinical Decision Support System (CDSS) untuk deteksi dini risiko Diabetes
+Mellitus Tipe 2, sebagai bagian dari skripsi di Universitas Global Jakarta, Teknik
+Informatika.
+
+---
+
+## Stack Teknologi (AKTUAL — sudah berjalan)
+
+| Komponen | Teknologi | Versi Aktual | Status |
+|---|---|---|---|
+| ML Model Training | Python (scikit-learn, imbalanced-learn) | — | ✅ Selesai |
+| Model Format | .pkl via joblib | — | ✅ Selesai |
+| Model Serving | Flask API (Python) | — | ✅ Berjalan di localhost:5000 |
+| Frontend + Backend | Next.js | **16.2.9** | ✅ Berjalan di localhost:3000 |
+| React | React | **19.2.4** | ✅ |
+| CSS | **Tailwind CSS v4** | ^4 | ✅ (via `@tailwindcss/postcss`) |
+| Database ORM | Prisma | **5.22.0** | ✅ |
+| Database | MySQL via XAMPP | — | ✅ |
+| Auth | NextAuth | **4.24.14** | ✅ |
+| Icons | react-icons | ^5.6.0 | ✅ |
+| HTTP Client | axios | ^1.17.0 | ✅ |
+
+> ⚠️ **PERHATIAN:** Stack aktual BERBEDA dari rencana awal.
+> - Next.js yang terinstall adalah **v16.2.9** (bukan 14.2.29)
+> - React yang terinstall adalah **v19.2.4** (bukan 18)
+> - Tailwind yang terinstall adalah **v4** (bukan v3) — digunakan via `@tailwindcss/postcss`
+> - Jangan ubah versi ini; sistem sudah berjalan dengan kombinasi ini
+
+---
+
+## Versi Package (package.json aktual)
+
+```json
+{
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "axios": "^1.17.0",
+    "bcryptjs": "^3.0.3",
+    "next": "16.2.9",
+    "next-auth": "^4.24.14",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-icons": "^5.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "prisma": "^5.22.0",
+    "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  }
+}
+```
+
+---
+
+## Flask API (SUDAH SELESAI ✅)
+
+**Lokasi:** `C:\Users\user\Documents\Skripsi\Project\cdss-flask\`
+
+**Struktur:**
+```
+cdss-flask/
+├── venv/
+├── model/
+│   ├── rf_diabetes.pkl       ← model Random Forest terlatih
+│   └── feature_cols.pkl      ← urutan fitur
+├── diabetes.csv
+├── train_model.py
+├── app.py                    ← Flask API
+└── requirements.txt
+```
+
+**Cara menjalankan Flask:**
+```bash
+cd C:\Users\user\Documents\Skripsi\Project\cdss-flask
+venv\Scripts\activate
+python app.py
+# Berjalan di http://localhost:5000
+```
+
+**Endpoint:**
+- `GET /` → status API
+- `GET /health` → health check
+- `POST /predict` → prediksi risiko diabetes
+
+**Request format POST /predict:**
+```json
+{
+  "pregnancies": 3,
+  "glucose": 148,
+  "blood_pressure": 72,
+  "skin_thickness": 35,
+  "insulin": 0,
+  "bmi": 33.6,
+  "diabetes_pedigree_function": 0.627,
+  "age": 50
+}
+```
+
+**Response format:**
+```json
+{
+  "result": 1,
+  "probability": 78.4,
+  "risk_label": "Berisiko Diabetes",
+  "recommendation": "Segera lakukan pemeriksaan HbA1c...",
+  "clinical_summary": {
+    "glucose": "148.0 mg/dL — Prediabetes",
+    "bmi": "33.6 kg/m² — Obesitas II",
+    "blood_pressure": "72.0 mmHg — Normal",
+    "age": "50 tahun — Lansia Awal"
+  }
+}
+```
+
+---
+
+## Model ML — Detail Teknis
+
+**Hasil evaluasi (10-fold stratified CV):**
+- Accuracy: 86.07% ± 2.96%
+- AUC: 0.9375
+- Precision: 78.15%
+- Recall: 84.74%
+- F1-Score: 80.92%
+
+**Pipeline preprocessing di Flask:**
+- Glucose: <140=Normal(0), 140-199=Prediabetes(1), ≥200=DM(2)
+- BMI: <18.5=Kurus(0), 18.5-22.9=Normal(1), 23-24.9=OW(2), 25-29.9=ObesI(3), ≥30=ObesII(4)
+- BloodPressure (diastolik): <80=Normal(0), 80-89=PreHT(1), 90-99=HTI(2), ≥100=HTII(3)
+- Age: <25=Remaja(0), 25-34=DewasaAwal(1), 35-44=Dewasa(2), 45-59=LansiaAwal(3), ≥60=Lansia(4)
+- `glucose_bmi_risk` = `Glucose_disc × BMI_disc` (interaction feature)
+
+---
+
+## Database Schema (Prisma 5 + MySQL) — AKTUAL
+
+```prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int          @id @default(autoincrement())
+  name        String
+  email       String       @unique
+  password    String
+  role        Role         @default(NURSE)
+  createdAt   DateTime     @default(now())
+  predictions Prediction[]
+  @@map("users")
+}
+
+model Prediction {
+  id                       Int      @id @default(autoincrement())
+  userId                   Int
+  user                     User     @relation(fields: [userId], references: [id])
+  pregnancies              Float
+  glucose                  Float
+  bloodPressure            Float
+  skinThickness            Float
+  insulin                  Float
+  bmi                      Float
+  diabetesPedigreeFunction Float
+  age                      Int
+  result                   Int      // 0 = tidak berisiko, 1 = berisiko
+  probability              Float
+  riskLabel                String
+  recommendation           String   @db.Text
+  glucoseSummary           String
+  bmiSummary               String
+  bloodPressureSummary     String
+  ageSummary               String
+  createdAt                DateTime @default(now())
+  @@map("predictions")
+}
+
+enum Role {
+  NURSE
+  DOCTOR
+  ADMIN
+  PATIENT        ← DITAMBAHKAN: untuk pasien yang diskrining
+}
+```
+
+> **Perbedaan dari rencana awal:** Role `PATIENT` ditambahkan.
+> Tabel `users` dipakai untuk DUA hal: operator (ADMIN/DOCTOR/NURSE) yang bisa login,
+> dan pasien (PATIENT) yang hanya dipakai sebagai subjek skrining, tidak bisa login.
+
+**File `.env`:**
+```env
+DATABASE_URL="mysql://root:@localhost:3306/cdss_diabetes"
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="pp9/Ptj8tkKrjcsBko/1RZbdzEW17xlOm1JpbvED90w="
+FLASK_API_URL="http://localhost:5000"
+```
+
+---
+
+## Seed Database — AKTUAL
+
+File: `prisma/seed.ts`
+
+**Akun operator (bisa login):**
+| Role | Email | Password |
+|------|-------|----------|
+| ADMIN | admin@cdss.com | admin123 |
+| DOCTOR | dokter@cdss.com | admin123 |
+| NURSE | perawat@cdss.com | admin123 |
+
+**Contoh pasien (tidak bisa login, role PATIENT):**
+- Siti Rahayu — siti.rahayu@pasien.com
+- Ahmad Fauzi — ahmad.fauzi@pasien.com
+
+**Jalankan seed:**
+```bash
+npx prisma db seed
+```
+
+---
+
+## Struktur Folder Next.js — AKTUAL
+
+```
+cdss-nextjs/
+├── app/
+│   ├── (dashboard)/           ← Route Group (tidak muncul di URL)
+│   │   ├── layout.tsx         ← Sidebar dengan role-based nav
+│   │   ├── screening/
+│   │   │   ├── page.tsx       ← Form skrining + patient selection
+│   │   │   └── result/
+│   │   │       └── page.tsx   ← Halaman hasil prediksi
+│   │   ├── history/
+│   │   │   └── page.tsx       ← Riwayat per pasien (tabel + modal detail)
+│   │   ├── patients/          ← BARU: manajemen pasien (hanya ADMIN)
+│   │   │   └── page.tsx
+│   │   └── profile/
+│   │       └── page.tsx       ← Profil user + info sistem
+│   ├── api/
+│   │   ├── auth/
+│   │   │   └── [...nextauth]/
+│   │   │       └── route.ts   ← NextAuth handler
+│   │   ├── predict/
+│   │   │   └── route.ts       ← Proxy ke Flask + simpan ke DB
+│   │   ├── patients/
+│   │   │   ├── route.ts       ← GET list PATIENT + POST tambah pasien
+│   │   │   └── [id]/
+│   │   │       ├── route.ts   ← PUT edit + DELETE hapus pasien (ADMIN only)
+│   │   │       └── history/
+│   │   │           └── route.ts ← GET semua riwayat prediksi 1 pasien
+│   │   └── history/
+│   │       └── route.ts       ← GET daftar pasien + skrining terakhir (paginated)
+│   ├── login/
+│   │   └── page.tsx
+│   ├── layout.tsx             ← Root layout + Providers
+│   ├── page.tsx               ← Redirect ke /screening
+│   ├── providers.tsx          ← SessionProvider wrapper
+│   └── globals.css
+├── lib/
+│   └── prisma.ts              ← Prisma singleton
+├── types/
+│   └── next-auth.d.ts         ← Extend NextAuth types (id, role)
+├── prisma/
+│   ├── schema.prisma
+│   ├── seed.ts
+│   └── migrations/            ← Migration history
+├── middleware.ts              ← Route protection + ADMIN-only /patients
+├── .env
+└── package.json
+```
+
+---
+
+## API Routes — AKTUAL LENGKAP
+
+### `POST /api/auth/[...nextauth]` — NextAuth credentials
+- Login dengan email + password
+- Return session dengan `id`, `name`, `email`, `role`
+
+### `GET /api/patients`
+- Requires: session (any role)
+- Returns: semua user dengan `role = PATIENT`, diurutkan alphabetically
+- Select: `id, name, email, role, createdAt, _count.predictions`
+
+### `POST /api/patients`
+- Requires: session (any role)
+- Body: `{ name, email, password }`
+- Creates: user baru dengan `role = PATIENT` (password di-hash bcrypt)
+- Returns: `{ id, name, email, role, createdAt }`
+
+### `PUT /api/patients/[id]`
+- Requires: session dengan `role = ADMIN`
+- Body: `{ name, email }`
+- Updates: nama dan email pasien (cek duplikat email)
+- Returns: data pasien ter-update
+
+### `DELETE /api/patients/[id]`
+- Requires: session dengan `role = ADMIN`
+- Action: hapus semua predictions pasien dulu (FK), lalu hapus user
+- Returns: `{ success: true }`
+
+### `GET /api/patients/[id]/history`
+- Requires: session
+- Returns: semua predictions pasien tertentu, urut `createdAt DESC`
+- Select: semua field prediction (id, createdAt, result, probability, riskLabel, glucose, bmi, bloodPressure, age, pregnancies, insulin, skinThickness, diabetesPedigreeFunction, recommendation, glucoseSummary, bmiSummary, bloodPressureSummary, ageSummary)
+
+### `POST /api/predict`
+- Requires: session
+- Body: `{ patientId, pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, diabetes_pedigree_function, age }`
+- Flow: forward ke Flask → simpan ke DB → return hasil
+- Returns: `{ id, patientName, result, probability, risk_label, recommendation, clinical_summary }`
+
+### `GET /api/history?page=1&limit=10&search=`
+- Requires: session
+- Returns: daftar pasien (PATIENT) yang sudah pernah skrining, paginated
+- Format response:
+```json
+{
+  "data": [{
+    "id": 1,
+    "name": "Siti Rahayu",
+    "email": "siti@pasien.com",
+    "totalScreenings": 3,
+    "lastScreening": {
+      "id": 12,
+      "createdAt": "2025-...",
+      "result": 1,
+      "probability": 78.4,
+      "riskLabel": "Berisiko Diabetes"
+    }
+  }],
+  "total": 25,
+  "page": 1,
+  "totalPages": 3
+}
+```
+
+---
+
+## Halaman & Fitur — STATUS AKTUAL
+
+### ✅ `/login` — SELESAI
+- Form email + password
+- NextAuth `signIn('credentials', { redirect: false })`
+- Error handling inline
+- Redirect ke `/screening` jika berhasil
+
+### ✅ `/screening` — SELESAI
+- **Patient selection** (Step 1):
+  - Searchable dropdown dari `/api/patients` (hanya role PATIENT)
+  - Filter by nama atau email
+  - Tombol "+ Tambah Pasien" → buka modal
+  - Modal: Nama, Email, Password → `POST /api/patients`
+  - Setelah simpan → auto-select pasien baru
+  - Selected patient chip (avatar, nama, email, role badge)
+- **Form 8 input klinis** (Step 2, disabled sampai pasien dipilih):
+  1. Jumlah Kehamilan (kali)
+  2. Kadar Glukosa (mg/dL)
+  3. Tekanan Darah Diastolik (mmHg)
+  4. Ketebalan Lipatan Kulit (mm)
+  5. Kadar Insulin (µU/mL)
+  6. BMI (kg/m²)
+  7. Diabetes Pedigree Function (skor)
+  8. Usia (tahun)
+- Submit → `POST /api/predict` → simpan hasil ke `sessionStorage` → redirect ke `/screening/result`
+
+### ✅ `/screening/result` — SELESAI
+- Baca hasil dari `sessionStorage('predictionResult')`
+- Jika tidak ada data → redirect ke `/screening`
+- Risk badge dengan color theme (merah = berisiko, hijau = tidak)
+- Probability bar animasi (3 zona: hijau/amber/merah, threshold 40% dan 70%)
+- Clinical summary (4 parameter: Glukosa, BMI, Tekanan Darah, Usia)
+- Rekomendasi tindak lanjut
+- Tabel data input (8 parameter)
+- Disclaimer model ML
+- Tombol: "Periksa Pasien Lain" → `/screening`, "Riwayat" → `/history`
+
+### ✅ `/history` — SELESAI
+- Tabel daftar **pasien** yang sudah pernah skrining (bukan per-prediksi)
+- Kolom: No, Pasien (avatar+nama+email), Jumlah Skrining, Skrining Terakhir, Hasil Terakhir, Aksi
+- Search by nama pasien (debounce 350ms)
+- Pagination (10 per halaman, max 5 tombol page)
+- Tombol "Detail" → buka **modal detail** per pasien
+- Modal detail: tabel semua riwayat prediksi pasien tersebut
+  - Kolom modal: No, Tanggal, Glukosa, BMI, T. Darah, Usia, Probabilitas, Hasil
+  - Data dari `GET /api/patients/[id]/history`
+  - Loading skeleton saat fetch
+  - Close on backdrop click atau tombol ×
+
+### ✅ `/patients` — SELESAI (BARU, tidak ada di rencana awal)
+- **Hanya bisa diakses oleh ADMIN** (middleware block redirect ke /screening)
+- Tabel semua pasien terdaftar (role PATIENT)
+- Kolom: No, Pasien (avatar+nama+email), Tanggal Daftar, Jumlah Skrining, Aksi (ADMIN only)
+- Search by nama atau email (client-side filter)
+- Modal Tambah Pasien: Nama, Email, Password (POST /api/patients)
+- Modal Edit Pasien: Nama, Email saja (PUT /api/patients/[id])
+- Konfirmasi hapus pasien (DELETE /api/patients/[id]) + warning "semua riwayat ikut terhapus"
+
+### ✅ `/profile` — SELESAI
+- Avatar dengan inisial nama (max 2 huruf)
+- Info akun: Nama, Email, Role/Jabatan, ID Pengguna
+- Info sistem: Nama Sistem, Versi, Model ML, Institusi, Tahun
+- Tombol "Keluar dari Sistem" → `signOut({ callbackUrl: '/login' })`
+
+---
+
+## Sidebar Navigation (role-based)
+
+```typescript
+const NAV_ITEMS = [
+  { href: '/screening', label: 'Skrining',  roles: ['ADMIN', 'DOCTOR', 'NURSE'] },
+  { href: '/history',   label: 'Riwayat',   roles: ['ADMIN', 'DOCTOR', 'NURSE'] },
+  { href: '/patients',  label: 'Pasien',    roles: ['ADMIN'] },       // BARU
+  { href: '/profile',   label: 'Profil',    roles: ['ADMIN', 'DOCTOR', 'NURSE'] },
+]
+```
+
+Role badges di sidebar:
+- ADMIN → badge ungu `bg-purple-100 text-purple-700`
+- DOCTOR → badge biru `bg-blue-100 text-blue-700`
+- NURSE → badge teal `bg-teal-100 text-teal-700`
+
+---
+
+## Middleware — AKTUAL
+
+```typescript
+// middleware.ts
+// - Semua route /screening, /history, /profile, /patients → wajib login
+// - /patients/** → redirect ke /screening jika bukan ADMIN
+export const config = {
+  matcher: ['/screening/:path*', '/history/:path*', '/profile/:path*', '/patients/:path*'],
+}
+```
+
+---
+
+## Alur Data Transfer (Screening → Result)
+
+Hasil prediksi **tidak disimpan di query params atau URL**. Setelah `POST /api/predict` berhasil, data disimpan ke:
+
+```typescript
+sessionStorage.setItem('predictionResult', JSON.stringify({
+  id,             // prediction ID dari DB
+  patientName,    // nama pasien
+  result,         // 0 atau 1
+  probability,    // angka 0-100
+  risk_label,     // string dari Flask
+  recommendation, // string dari Flask
+  clinical_summary: { glucose, bmi, blood_pressure, age },
+  inputData: {    // form values asli untuk ditampilkan di result
+    pregnancies, glucose, blood_pressure, skin_thickness,
+    insulin, bmi, diabetes_pedigree_function, age
+  }
+}))
+router.push('/screening/result')
+```
+
+Halaman result membaca `sessionStorage.getItem('predictionResult')`. Jika kosong → redirect ke `/screening`.
+
+---
+
+## Alur Kerja Lengkap Sistem
+
+```
+User login di /login
+        ↓
+Redirect ke /screening
+        ↓
+Pilih pasien dari dropdown (hanya role PATIENT)
+atau tambah baru via modal → auto-select
+        ↓
+Isi 8 parameter klinis (form disabled sampai pasien dipilih)
+        ↓
+Submit → POST /api/predict (Next.js API Route)
+        ↓
+Next.js forward ke Flask POST /predict
+        ↓
+Flask: preprocessing + inferensi model .pkl
+        ↓
+Return result + probability + clinical_summary + recommendation
+        ↓
+Next.js simpan ke MySQL (tabel predictions, userId = patientId)
+        ↓
+Simpan ke sessionStorage → redirect /screening/result
+        ↓
+Tampilkan: badge risiko, probability bar, clinical summary, rekomendasi, input data
+        ↓
+User klik "Periksa Pasien Lain" → /screening
+atau klik "Riwayat" → /history
+        ↓
+/history: tabel pasien + modal detail semua riwayat per pasien
+        ↓
+/patients (ADMIN): kelola daftar pasien (tambah/edit/hapus)
+```
+
+---
+
+## Catatan Penting untuk Development
+
+1. **Tailwind v4 syntax** — Konfigurasi lewat CSS `@import "tailwindcss"` di globals.css, bukan `tailwind.config.js`. PostCSS plugin: `@tailwindcss/postcss`.
+
+2. **Prisma singleton** — Selalu import dari `lib/prisma.ts`, jangan `new PrismaClient()` langsung.
+
+3. **Role PATIENT vs operator** — `PATIENT` = subjek skrining, tidak bisa login. `ADMIN`/`DOCTOR`/`NURSE` = operator yang bisa login.
+
+4. **`/api/patients` hanya return PATIENT** — Filter: `where: { role: 'PATIENT' }`. Operator tidak muncul di dropdown skrining.
+
+5. **`/api/history` hanya pasien yang sudah skrining** — Filter: `predictions: { some: {} }`. Pasien yang belum pernah skrining tidak muncul di tabel history.
+
+6. **Params async di Next.js 16** — `params` di route handler harus di-await:
+   ```typescript
+   const { id } = await params  // BENAR
+   const { id } = params        // ERROR di Next.js 16
+   ```
+
+7. **Flask harus jalan** saat test prediksi — jalankan dulu sebelum test Next.js.
+
+8. **XAMPP MySQL harus aktif** sebelum `prisma migrate` atau `npm run dev`.
+
+9. **sessionStorage** untuk pass data screening → result (bukan query params).
+
+10. **react-icons v5** — Import dari `react-icons/fa` (FontAwesome), contoh: `FaStethoscope`, `FaUsers`, dll.
+
+---
+
+## File-file yang Sudah Ada & Selesai ✅
+
+| File | Status |
+|------|--------|
+| `app/login/page.tsx` | ✅ Selesai |
+| `app/(dashboard)/layout.tsx` | ✅ Selesai (sidebar role-based) |
+| `app/(dashboard)/screening/page.tsx` | ✅ Selesai |
+| `app/(dashboard)/screening/result/page.tsx` | ✅ Selesai |
+| `app/(dashboard)/history/page.tsx` | ✅ Selesai |
+| `app/(dashboard)/patients/page.tsx` | ✅ Selesai (BARU) |
+| `app/(dashboard)/profile/page.tsx` | ✅ Selesai |
+| `app/page.tsx` | ✅ Redirect ke /screening |
+| `app/layout.tsx` | ✅ Root layout + Providers |
+| `app/providers.tsx` | ✅ SessionProvider |
+| `app/api/auth/[...nextauth]/route.ts` | ✅ NextAuth handler |
+| `app/api/predict/route.ts` | ✅ Proxy Flask + simpan DB |
+| `app/api/patients/route.ts` | ✅ GET + POST pasien |
+| `app/api/patients/[id]/route.ts` | ✅ PUT + DELETE (ADMIN) |
+| `app/api/patients/[id]/history/route.ts` | ✅ GET riwayat per pasien |
+| `app/api/history/route.ts` | ✅ GET history paginated |
+| `lib/prisma.ts` | ✅ Prisma singleton |
+| `types/next-auth.d.ts` | ✅ Extended types (id, role) |
+| `middleware.ts` | ✅ Auth + ADMIN guard |
+| `prisma/schema.prisma` | ✅ Schema final |
+| `prisma/seed.ts` | ✅ 3 operator + 2 pasien sample |
+| `.env` | ✅ Konfigurasi lengkap |
+
+**Tidak ada file yang belum dibuat.** Semua fitur yang direncanakan sudah selesai diimplementasi.

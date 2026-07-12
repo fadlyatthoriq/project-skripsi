@@ -1,0 +1,501 @@
+Patient_ID,Umur,Suhu_Tubuh,Tekanan_Darah_Sistolik,Gula_Darah_Sewaktu,Batuk,Pilek,Sesak_Nafas,Nyeri_Dada,Mual_Muntah,Nyeri_Ulu_Hati,Lama_Demam_Hari,Riwayat_Asma,DIAGNOSA_FINAL
+1,40,38.2,128,115,Ya,Ya,Ya,Tidak,Tidak,Tidak,3,Tidak,Pneumonia
+2,45,36.4,165,135,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+3,32,38.9,112,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+4,68,36.5,135,160,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+5,28,37.1,120,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+6,55,36.7,140,285,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+7,22,37.4,118,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+8,35,36.5,115,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+9,25,39.3,105,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+10,48,37.8,125,118,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+11,55,39.0,130,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+12,65,36.5,148,120,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+13,40,39.2,110,95,Tidak,Ya,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+14,70,36.6,155,180,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+15,35,37.5,125,110,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,2,Tidak,Gastritis
+16,62,36.8,128,240,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+17,30,37.0,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+18,40,36.6,125,105,Ya,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+19,30,39.0,100,90,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+20,50,38.0,130,110,Ya,Tidak,Tidak,Tidak,Tidak,Tidak,8,Tidak,TBC
+21,50,38.5,135,140,Ya,Tidak,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+22,60,36.4,175,125,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+23,25,38.8,115,110,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,8,Tidak,Demam Tifoid
+24,60,36.7,150,150,Tidak,Tidak,Ya,Ya,Tidak,Ya,0,Tidak,Jantung Koroner
+25,45,37.2,118,100,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+26,58,37.0,145,310,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+27,15,37.6,105,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+28,28,36.7,120,95,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+29,20,39.5,95,92,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+30,45,37.6,128,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,20,Tidak,TBC
+31,48,39.1,132,120,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+32,70,36.3,168,140,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+33,38,39.0,118,100,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+34,65,36.8,140,170,Tidak,Tidak,Ya,Ya,Tidak,Tidak,1,Tidak,Jantung Koroner
+35,30,37.4,122,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+36,65,36.9,130,260,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+37,18,37.2,110,102,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+38,38,36.5,118,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+39,28,38.9,102,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+40,55,37.5,135,120,Ya,Tidak,Tidak,Tidak,Tidak,Tidak,12,Tidak,TBC
+41,60,38.7,140,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+42,55,36.7,155,130,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+43,28,39.4,115,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+44,72,36.8,160,190,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+45,40,37.0,130,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+46,68,36.6,150,290,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+47,24,37.5,115,90,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+48,45,36.6,120,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+49,35,39.1,100,95,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+50,60,37.7,135,115,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+51,42,38.3,125,112,Ya,Ya,Ya,Tidak,Tidak,Tidak,3,Tidak,Pneumonia
+52,58,36.5,160,138,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+53,35,38.7,110,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+54,70,36.6,140,165,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+55,30,37.0,125,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+56,52,36.8,135,270,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+57,20,37.3,115,97,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+58,38,36.5,118,102,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+59,26,39.2,108,96,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+60,50,37.7,132,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,14,Tidak,TBC
+61,52,38.6,138,128,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+62,75,36.3,170,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+63,30,39.1,118,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+64,78,36.7,145,175,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+65,42,37.3,132,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+66,60,37.0,155,250,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+67,25,37.5,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+68,42,36.6,125,115,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+69,32,39.0,100,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+70,65,37.5,130,120,Ya,Tidak,Ya,Tidak,Tidak,Tidak,10,Tidak,TBC
+71,58,38.4,142,135,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+72,68,36.5,158,130,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+73,45,39.3,112,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+74,80,36.5,138,160,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+75,38,37.1,120,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+76,70,36.8,142,280,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+77,19,37.4,115,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+78,30,36.5,118,105,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+79,27,39.4,105,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+80,55,37.8,135,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,16,Tidak,TBC
+81,62,38.9,130,120,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+82,85,36.2,175,150,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+83,42,38.6,110,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+84,75,36.7,165,195,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+85,45,37.3,125,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+86,72,37.0,135,275,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+87,28,37.0,110,102,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+88,48,36.6,128,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+89,35,38.9,100,95,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+90,60,37.2,140,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,12,Tidak,TBC
+91,68,38.5,145,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+92,50,36.5,155,128,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+93,20,39.4,115,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+94,60,36.6,140,160,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+95,50,37.0,135,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+96,75,36.9,128,260,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+97,32,37.5,120,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+98,52,36.7,130,105,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+99,40,39.2,105,102,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+100,65,37.4,145,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,22,Tidak,TBC
+101,45,38.3,126,118,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+102,55,36.4,162,130,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+103,30,38.8,110,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+104,70,36.6,145,170,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+105,25,37.1,118,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+106,60,36.7,135,280,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+107,24,37.3,115,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+108,35,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+109,28,39.3,105,95,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+110,52,37.8,128,122,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+111,50,38.9,130,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+112,65,36.3,168,140,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+113,32,39.0,112,100,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+114,75,36.8,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+115,38,37.4,125,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+116,68,36.9,140,265,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+117,20,37.2,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+118,40,36.6,122,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+119,30,38.9,102,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+120,58,37.5,135,128,Ya,Tidak,Ya,Tidak,Tidak,Tidak,12,Tidak,TBC
+121,55,38.6,135,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+122,70,36.4,170,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+123,40,39.3,115,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+124,80,36.5,140,160,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+125,42,37.0,130,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+126,62,36.8,150,295,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+127,28,37.5,118,97,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+128,45,36.6,125,105,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+129,35,39.4,105,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+130,65,37.6,138,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+131,60,38.5,140,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+132,75,36.3,175,150,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+133,35,38.7,112,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+134,85,36.7,155,180,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+135,48,37.2,135,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+136,78,37.0,140,255,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+137,22,37.4,115,100,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+138,50,36.5,130,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+139,40,39.1,102,105,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+140,70,37.8,145,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+141,65,38.8,145,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+142,60,36.5,158,125,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+143,45,39.0,118,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+144,88,36.6,160,190,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+145,52,37.0,140,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+146,80,36.8,155,285,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+147,30,37.5,120,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+148,55,36.6,135,115,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+149,42,39.3,110,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+150,75,37.4,150,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,20,Tidak,TBC
+151,50,38.6,135,125,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+152,65,36.4,170,140,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+153,38,39.2,115,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+154,72,36.7,140,175,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+155,40,37.3,122,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+156,65,36.9,130,260,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+157,25,37.2,110,102,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+158,40,36.5,125,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+159,32,38.9,102,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+160,60,37.5,135,120,Ya,Tidak,Ya,Tidak,Tidak,Tidak,12,Tidak,TBC
+161,55,39.0,130,120,Ya,Tidak,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+162,70,36.3,165,135,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+163,42,39.1,118,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+164,78,36.8,150,180,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+165,45,37.4,130,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+166,70,36.7,145,290,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+167,28,37.3,115,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+168,48,36.6,128,105,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+169,35,39.4,108,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+170,65,37.8,140,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+171,60,38.7,140,135,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+172,80,36.4,175,150,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+173,40,38.6,115,100,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+174,85,36.5,165,190,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+175,50,37.0,135,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+176,72,36.9,150,270,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+177,32,37.5,120,100,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+178,52,36.7,130,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+179,40,39.2,105,102,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+180,75,37.4,145,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+181,65,38.9,135,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+182,58,36.5,155,125,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+183,45,39.3,110,115,Tidak,Ya,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+184,70,36.8,140,165,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+185,55,37.1,140,118,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+186,60,36.8,125,245,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+187,35,37.3,118,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+188,48,36.6,128,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+189,45,39.0,112,105,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+190,80,37.6,150,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,20,Tidak,TBC
+191,70,38.6,142,135,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+192,62,36.4,168,140,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+193,50,38.7,115,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+194,90,36.6,150,185,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+195,60,37.4,145,120,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+196,85,37.0,140,280,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+197,40,37.2,125,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+198,55,36.5,135,115,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+199,50,39.4,108,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+200,85,37.7,155,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+201,48,38.3,130,122,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+202,55,36.5,160,135,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+203,30,38.9,112,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+204,65,36.6,140,160,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+205,35,37.1,120,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+206,50,36.7,135,285,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+207,22,37.4,118,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+208,38,36.5,115,102,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+209,26,39.3,105,96,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+210,55,37.8,130,120,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+211,52,38.8,135,128,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+212,70,36.3,172,142,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+213,40,39.0,118,100,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+214,75,36.7,155,180,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+215,45,37.3,125,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+216,68,36.9,140,265,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+217,25,37.2,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+218,40,36.6,122,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+219,30,38.9,102,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+220,60,37.5,135,128,Ya,Tidak,Ya,Tidak,Tidak,Tidak,12,Tidak,TBC
+221,55,38.6,140,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+222,80,36.4,170,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+223,42,39.3,115,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+224,85,36.5,160,195,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+225,50,37.0,130,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+226,72,36.8,145,290,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+227,28,37.5,118,97,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+228,45,36.6,125,105,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+229,35,39.4,105,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+230,65,37.6,138,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+231,60,38.5,145,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+232,75,36.3,175,150,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+233,40,38.7,112,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+234,90,36.7,165,180,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+235,55,37.2,140,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+236,78,37.0,150,255,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+237,30,37.4,120,100,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+238,50,36.5,130,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+239,40,39.1,102,105,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+240,70,37.8,145,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,22,Tidak,TBC
+241,55,38.8,130,128,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+242,65,36.4,170,140,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+243,35,39.0,110,100,Tidak,Ya,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+244,75,36.6,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+245,42,37.5,125,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+246,68,36.7,140,270,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+247,20,37.3,115,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+248,38,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+249,26,39.3,105,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+250,58,37.7,135,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+251,58,38.6,138,135,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+252,70,36.3,172,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+253,30,39.1,118,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+254,80,36.7,150,175,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+255,40,37.4,132,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+256,65,37.0,155,250,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+257,25,37.5,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+258,42,36.6,125,115,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+259,32,39.0,100,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+260,65,37.5,138,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+261,62,38.4,142,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+262,75,36.5,158,125,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+263,45,39.3,112,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+264,82,36.6,138,160,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+265,52,37.1,140,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+266,70,36.8,155,285,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+267,30,37.4,120,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+268,48,36.5,135,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+269,40,39.4,105,102,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+270,75,37.8,150,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,20,Tidak,TBC
+271,50,38.3,125,118,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+272,60,36.4,162,130,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+273,35,38.8,110,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+274,68,36.7,145,170,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+275,25,37.1,118,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+276,55,36.7,135,280,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+277,24,37.3,115,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+278,35,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+279,28,39.3,105,95,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+280,52,37.7,128,122,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+281,55,38.9,130,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+282,70,36.3,168,140,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+283,38,39.0,112,100,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+284,75,36.8,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+285,42,37.4,125,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+286,68,36.9,140,265,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+287,20,37.2,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+288,40,36.6,122,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+289,30,38.9,102,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+290,60,37.5,135,128,Ya,Tidak,Ya,Tidak,Tidak,Tidak,12,Tidak,TBC
+291,58,38.6,135,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+292,80,36.4,170,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+293,45,39.3,115,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+294,85,36.5,160,195,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+295,50,37.0,130,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+296,72,36.8,145,290,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+297,28,37.5,118,97,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+298,45,36.6,125,105,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+299,35,39.4,105,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+300,65,37.6,138,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+301,60,38.5,145,135,Ya,No,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+302,75,36.3,175,150,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+303,40,38.7,112,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+304,90,36.7,165,180,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+305,55,37.2,140,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+306,78,37.0,150,255,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+307,30,37.4,120,100,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+308,50,36.5,130,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+309,40,39.1,102,105,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+310,70,37.8,145,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,22,Tidak,TBC
+311,55,38.8,130,128,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+312,65,36.4,170,140,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+313,35,39.0,110,100,Tidak,Ya,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+314,75,36.6,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+315,42,37.5,125,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+316,68,36.7,140,270,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+317,20,37.3,115,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+318,38,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+319,26,39.3,105,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+320,58,37.7,135,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+321,58,38.6,138,135,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+322,70,36.3,172,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+323,30,39.1,118,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+324,80,36.7,150,175,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+325,40,37.4,132,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+326,65,37.0,155,250,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+327,25,37.5,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+328,42,36.6,125,115,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+329,32,39.0,100,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+330,65,37.5,138,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+331,62,38.4,142,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+332,75,36.5,158,125,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+333,45,39.3,112,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+334,82,36.6,138,160,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+335,52,37.1,140,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+336,70,36.8,155,285,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+337,30,37.4,120,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+338,48,36.5,135,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+339,40,39.4,105,102,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+340,75,37.8,150,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,20,Tidak,TBC
+341,50,38.3,125,118,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+342,60,36.4,162,130,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+343,35,38.8,110,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+344,68,36.7,145,170,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+345,25,37.1,118,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+346,55,36.7,135,280,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+347,24,37.3,115,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+348,35,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+349,28,39.3,105,95,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+350,52,37.7,128,122,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+351,55,38.9,130,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+352,70,36.3,168,140,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+353,38,39.0,112,100,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+354,75,36.8,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+355,42,37.4,125,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+356,68,36.9,140,265,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+357,20,37.2,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+358,40,36.6,122,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+359,30,38.9,102,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+360,60,37.5,135,128,Ya,Tidak,Ya,Tidak,Tidak,Tidak,12,Tidak,TBC
+361,58,38.6,135,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+362,80,36.4,170,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+363,45,39.3,115,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+364,85,36.5,160,195,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+365,50,37.0,130,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+366,72,36.8,145,290,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+367,28,37.5,118,97,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+368,45,36.6,125,105,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+369,35,39.4,105,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+370,65,37.6,138,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+371,60,38.5,145,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+372,75,36.3,175,150,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+373,40,38.7,112,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+374,90,36.7,165,180,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+375,55,37.2,140,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+376,78,37.0,150,255,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+377,30,37.4,120,100,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+378,50,36.5,130,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+379,40,39.1,102,105,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+380,70,37.8,145,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,22,Tidak,TBC
+381,55,38.8,130,128,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+382,65,36.4,170,140,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+383,35,39.0,110,100,Tidak,Ya,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+384,75,36.6,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+385,42,37.5,125,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+386,68,36.7,140,270,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+387,20,37.3,115,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+388,38,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+389,26,39.3,105,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+390,58,37.7,135,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+391,58,38.6,138,135,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+392,70,36.3,172,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+393,30,39.1,118,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+394,80,36.7,150,175,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+395,40,37.4,132,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+396,65,37.0,155,250,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+397,25,37.5,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+398,42,36.6,125,115,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+399,32,39.0,100,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+400,65,37.5,138,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+401,62,38.4,142,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+402,75,36.5,158,125,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+403,45,39.3,112,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+404,82,36.6,138,160,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+405,52,37.1,140,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+406,70,36.8,155,285,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+407,30,37.4,120,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+408,48,36.5,135,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+409,40,39.4,105,102,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+410,75,37.8,150,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,20,Tidak,TBC
+411,50,38.3,125,118,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+412,60,36.4,162,130,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+413,35,38.8,110,105,Tidak,Tidak,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+414,68,36.7,145,170,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+415,25,37.1,118,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+416,55,36.7,135,280,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+417,24,37.3,115,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+418,35,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+419,28,39.3,105,95,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+420,52,37.7,128,122,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+421,55,38.9,130,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+422,70,36.3,168,140,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+423,38,39.0,112,100,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+424,75,36.8,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+425,42,37.4,125,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+426,68,36.9,140,265,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+427,20,37.2,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+428,40,36.6,122,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+429,30,38.9,102,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+430,60,37.5,135,128,Ya,Tidak,Ya,Tidak,Tidak,Tidak,12,Tidak,TBC
+431,58,38.6,135,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+432,80,36.4,170,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+433,45,39.3,115,110,Tidak,Ya,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+434,85,36.5,160,195,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+435,50,37.0,130,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+436,72,36.8,145,290,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+437,28,37.5,118,97,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+438,45,36.6,125,105,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+439,35,39.4,105,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+440,65,37.6,138,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+441,60,38.5,145,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+442,75,36.3,175,150,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+443,40,38.7,112,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+444,90,36.7,165,180,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+445,55,37.2,140,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+446,78,37.0,150,255,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+447,30,37.4,120,100,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+448,50,36.5,130,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+449,40,39.1,102,105,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+450,70,37.8,145,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,22,Tidak,TBC
+451,55,38.8,130,128,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+452,65,36.4,170,140,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+453,35,39.0,110,100,Tidak,Ya,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+454,75,36.6,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+455,42,37.5,125,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+456,68,36.7,140,270,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+457,20,37.3,115,95,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+458,38,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+459,26,39.3,105,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+460,58,37.7,135,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,18,Tidak,TBC
+461,58,38.6,138,135,Ya,Ya,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+462,70,36.3,172,145,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+463,30,39.1,118,108,Tidak,Tidak,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+464,80,36.7,150,175,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+465,40,37.4,132,112,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+466,65,37.0,155,250,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+467,25,37.5,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+468,42,36.6,125,115,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+469,32,39.0,100,100,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+470,65,37.5,138,130,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+471,62,38.4,142,130,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+472,75,36.5,158,125,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+473,45,39.3,112,112,Tidak,Ya,Tidak,Tidak,Ya,Ya,8,Tidak,Demam Tifoid
+474,82,36.6,138,160,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+475,52,37.1,140,115,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+476,70,36.8,155,285,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+477,30,37.4,120,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+478,48,36.5,135,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+479,40,39.4,105,102,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+480,75,37.8,150,135,Ya,Tidak,Ya,Tidak,Tidak,Tidak,20,Tidak,TBC
+481,50,38.3,125,118,Ya,Ya,Ya,Tidak,Tidak,Tidak,4,Tidak,Pneumonia
+482,60,36.4,162,130,Tidak,Tidak,Tidak,Ya,Tidak,Tidak,0,Tidak,Hipertensi
+483,35,38.8,110,105,Tidak,Ya,Tidak,Tidak,Ya,Ya,7,Tidak,Demam Tifoid
+484,68,36.7,145,170,Tidak,Ya,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+485,25,37.1,118,102,Tidak,Tidak,Tidak,Tidak,Ya,Ya,1,Tidak,Gastritis
+486,55,36.7,135,280,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+487,24,37.3,115,98,Ya,Ya,Tidak,Tidak,Tidak,Tidak,3,Tidak,ISPA
+488,35,36.5,118,100,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+489,28,39.3,105,95,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,4,Tidak,Demam Berdarah
+490,52,37.7,128,122,Ya,Tidak,Ya,Tidak,Tidak,Tidak,15,Tidak,TBC
+491,55,38.9,130,125,Ya,Tidak,Ya,Tidak,Tidak,Tidak,5,Tidak,Pneumonia
+492,70,36.3,168,140,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Hipertensi
+493,38,39.0,112,100,Tidak,Ya,Tidak,Tidak,Ya,Ya,6,Tidak,Demam Tifoid
+494,75,36.8,155,185,Tidak,Tidak,Ya,Ya,Tidak,Tidak,0,Tidak,Jantung Koroner
+495,42,37.4,125,110,Tidak,Tidak,Tidak,Tidak,Ya,Ya,0,Tidak,Gastritis
+496,68,36.9,140,265,Tidak,Tidak,Tidak,Tidak,Tidak,Tidak,0,Tidak,Diabetes Melitus
+497,20,37.2,110,105,Ya,Ya,Tidak,Tidak,Tidak,Tidak,2,Tidak,ISPA
+498,40,36.6,122,110,Tidak,Tidak,Ya,Tidak,Tidak,Tidak,0,Ya,Asma
+499,30,38.9,102,98,Tidak,Tidak,Tidak,Tidak,Ya,Tidak,3,Tidak,Demam Berdarah
+500,60,37.5,135,128,Ya,Tidak,Ya,Tidak,Tidak,Tidak,12,Tidak,TBC
